@@ -1,40 +1,72 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-class Torneio {
+/**
+ * Representa um Torneio onde vários competidores se enfrentam até haver um campeão.
+ */
+public class Torneio {
 
-    private ArrayList<Lutador> lutadores;
+    // Lista de participantes no torneio
+    private ArrayList<Competidor> competidores;
 
+    /**
+     * Construtor padrão. Inicializa a lista de competidores.
+     */
     public Torneio() {
-        lutadores = new ArrayList<>();
+        competidores = new ArrayList<>();
     }
 
-    public void adicionarLutador(Lutador lutador) {
-        lutadores.add(lutador);
+    /**
+     * Adiciona um novo competidor ao torneio.
+     *
+     * @param c Instância de Competidor (ex: Lutador)
+     */
+    public void adicionarCompetidor(Competidor c) {
+        competidores.add(c);
     }
 
+    /**
+     * Executa o torneio até restar apenas um vencedor.
+     * Realiza sucessivos combates entre os primeiros dois competidores da lista.
+     */
     public void iniciarTorneio() {
         System.out.println("Iniciando o torneio de MMA!");
 
-        while (lutadores.size() > 1) {
-            Lutador vencedor = realiazarLuta(lutadores.get(0), lutadores.get(1));
-            System.out.println("Vencedor: " + vencedor.getNome());
-            lutadores.remove(vencedor == lutadores.get(0) ? 1 : 0);
+        try {
+            while (competidores.size() > 1) {
+                Competidor vencedor = realizarLuta(competidores.get(0), competidores.get(1));
+                System.out.println("Vencedor: " + vencedor.getNome());
+                // Elimina o perdedor
+                competidores.remove(vencedor == competidores.get(0) ? 1 : 0);
+            }
 
+            if (competidores.isEmpty()) {
+                System.out.println("Erro: nenhum competidor disponível.");
+            } else {
+                System.out.println("Campeão do torneio: " + competidores.get(0).getNome());
+            }
+
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Erro ao tentar aceder a competidores: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Erro inesperado: " + e.getMessage());
         }
-
-        System.out.println("Campeão do torneio: " + lutadores.get(0).getNome());
-
     }
 
-    private Lutador realiazarLuta(Lutador l1, Lutador l2) {
-        System.out.println("Luta entre: " + l1 + " VS " + l2);
+    /**
+     * Simula uma luta entre dois competidores.
+     * O vencedor é escolhido com base numa probabilidade proporcional à sua habilidade.
+     *
+     * @param c1 Primeiro competidor
+     * @param c2 Segundo competidor
+     * @return Vencedor da luta
+     */
+    private Competidor realizarLuta(Competidor c1, Competidor c2) {
+        System.out.println("Luta entre: " + c1.getDescricao() + " VS " + c2.getDescricao());
 
         Random random = new Random();
-        int resultado = random.nextInt(l1.getHabilidade() + l2.getHabilidade());
+        int resultado = random.nextInt(c1.getHabilidade() + c2.getHabilidade());
 
-        return resultado < l1.getHabilidade() ? l1 : l2;
-
+        return resultado < c1.getHabilidade() ? c1 : c2;
     }
-
 }
