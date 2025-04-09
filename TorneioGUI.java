@@ -92,9 +92,9 @@ public class TorneioGUI extends JFrame {
     private void iniciarTorneio() {
         // Simula um torneio com 4 lutadores fixos (ou vindos da interface)
         Competidor l1 = new Lutador("Anderson Silva", "Muay Thai", 85);
-        Competidor l2 = new Lutador("Jon Jones", "Kickboxing", 90);
+        Competidor l2 = new Lutador("Tomás Adão", "Kickboxing", 75);
         Competidor l3 = new Lutador("Khabib Nurmagomedov", "Jiu-Jitsu", 88);
-        Competidor l4 = new Lutador("Conor McGregor", "Boxe", 80);
+        Competidor l4 = new Lutador("Adalgisa Pedro", "Boxe", 54);
 
         torneio.adicionarCompetidor(l1);
         torneio.adicionarCompetidor(l2);
