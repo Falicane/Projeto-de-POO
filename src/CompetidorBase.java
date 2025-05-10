@@ -1,7 +1,8 @@
 package src;
 
 /**
- * Classe abstrata que implementa atributos/métodos comuns a todos os competidores.
+ * Classe abstrata que implementa atributos/métodos comuns a todos os
+ * competidores.
  */
 public abstract class CompetidorBase implements Competidor {
     private String nome;

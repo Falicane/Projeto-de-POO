@@ -1,4 +1,5 @@
 package src;
+
 /**
  * Representa um lutador de MMA, agora herdando de CompetidorBase.
  */

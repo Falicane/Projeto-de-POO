@@ -2,7 +2,8 @@ import src.HabilidadeInvalidaException;
 import src.Lutador;
 
 public class TorneioTest {
-    /**Suite de Testes**: `TorneioTest.java` verifica:
+    /**
+     * Suite de Testes**: `TorneioTest.java` verifica:
      * Criação válida de lutadores
      * Rejeição de habilidades inválidas
      */

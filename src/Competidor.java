@@ -5,6 +5,8 @@ package src;
  */
 public interface Competidor {
     String getNome();
+
     int getHabilidade();
+
     String getDescricao();
 }
