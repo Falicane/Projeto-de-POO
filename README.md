@@ -55,6 +55,14 @@ Depois abre o ficheiro `doc/index.html` no navegador para explorares a documenta
 
 ---
 
+## 🧪 Testes  
+Para executar os testes unitários:  
+1. Instale o JUnit no seu projeto (via Maven ou VS Code).  
+2. Execute `TorneioTest.java` como teste JUnit.  
+
+
+---
+
 ## 💡 Objetivos pedagógicos
 
 Este projeto tem como finalidades:
