@@ -19,7 +19,7 @@ public class TorneioGUI extends JFrame {
      */
     public TorneioGUI() {
         super("Torneio de MMA");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Fecha a aplicação ao fechar a janela
         setSize(600, 500);
         setLocationRelativeTo(null);
 
