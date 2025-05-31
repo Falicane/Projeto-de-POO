@@ -3,7 +3,8 @@ package torneio;
 import java.util.ArrayList;
 
 /**
- * Gerencia o torneio de MMA, organizando lutas, determinando o campeão e gerenciando pontos.
+ * Gerencia o torneio de MMA, organizando lutas, determinando o campeão e
+ * gerenciando pontos.
  * Usa composição com RegrasTorneio para determinar vencedores.
  */
 public class Torneio {
@@ -20,6 +21,7 @@ public class Torneio {
 
     /**
      * Adiciona um competidor ao torneio.
+     * 
      * @param c O competidor a ser adicionado.
      * @throws IllegalArgumentException se o competidor for nulo.
      */
@@ -32,6 +34,7 @@ public class Torneio {
 
     /**
      * Inicia o torneio, realizando lutas até restar um campeão.
+     * 
      * @throws IllegalStateException se houver menos de dois competidores.
      */
     public void iniciarTorneio() {
@@ -56,6 +59,7 @@ public class Torneio {
 
     /**
      * Realiza uma luta entre dois competidores e retorna o vencedor.
+     * 
      * @param c1 Primeiro competidor.
      * @param c2 Segundo competidor.
      * @return O competidor vencedor.
@@ -67,6 +71,7 @@ public class Torneio {
 
     /**
      * Obtém o número de competidores no torneio.
+     * 
      * @return Número de competidores.
      */
     public int getNumeroCompetidores() {
@@ -75,6 +80,7 @@ public class Torneio {
 
     /**
      * Obtém a lista de competidores.
+     * 
      * @return Lista de competidores.
      */
     public ArrayList<Competidor> getCompetidores() {
