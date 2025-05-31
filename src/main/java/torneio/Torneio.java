@@ -1,4 +1,4 @@
-package src;
+package torneio;
 
 import java.util.ArrayList;
 
@@ -79,5 +79,15 @@ public class Torneio {
      */
     public ArrayList<Competidor> getCompetidores() {
         return new ArrayList<>(competidores); // Retorna uma cópia para proteger encapsulamento
+    }
+
+    public void comecarTorneio() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'comecarTorneio'");
+    }
+
+    public Lutador getCampeao() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getCampeao'");
     }
 }

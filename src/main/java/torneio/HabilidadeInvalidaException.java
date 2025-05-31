@@ -1,4 +1,4 @@
-package src;
+package torneio;
 
 /**
  * Exceção lançada quando a habilidade de um competidor é inválida (fora do intervalo 0-100).

@@ -1,4 +1,4 @@
-package src;
+package torneio;
 
 /**
  * Classe abstrata que fornece atributos e métodos comuns para todos os competidores.

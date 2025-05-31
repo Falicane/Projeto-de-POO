@@ -1,4 +1,4 @@
-package src;
+package torneio;
 
 /**
  * Interface que define o contrato para um competidor no torneio de MMA.

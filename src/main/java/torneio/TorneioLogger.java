@@ -1,4 +1,4 @@
-package src;
+package torneio;
 
 import javax.swing.JTextArea;
 
@@ -11,6 +11,7 @@ public class TorneioLogger extends Torneio {
 
     /**
      * Construtor que inicializa o logger com um JTextArea.
+     * 
      * @param logArea Área de texto para exibir os logs.
      * @throws IllegalArgumentException se logArea for nulo.
      */
@@ -24,6 +25,7 @@ public class TorneioLogger extends Torneio {
 
     /**
      * Adiciona um competidor e registra o evento no log.
+     * 
      * @param c O competidor a ser adicionado.
      */
     @Override
@@ -47,6 +49,7 @@ public class TorneioLogger extends Torneio {
 
     /**
      * Realiza uma luta, registra a luta e o vencedor no log.
+     * 
      * @param c1 Primeiro competidor.
      * @param c2 Segundo competidor.
      * @return O competidor vencedor.
@@ -57,5 +60,10 @@ public class TorneioLogger extends Torneio {
         Competidor vencedor = super.realizarLuta(c1, c2);
         logArea.append("Vencedor: " + vencedor.getDescricao() + "\n");
         return vencedor;
+    }
+
+    public static void setLogTextArea(JTextArea log) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setLogTextArea'");
     }
 }

@@ -1,4 +1,4 @@
-package src;
+package torneio;
 
 /**
  * Representa um lutador de MMA, com nome, estilo de luta, habilidade e pontos.

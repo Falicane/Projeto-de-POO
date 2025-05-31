@@ -1,4 +1,4 @@
-package src;
+package torneio;
 
 /**
  * Enumeração que define os estilos de luta disponíveis para lutadores no torneio.

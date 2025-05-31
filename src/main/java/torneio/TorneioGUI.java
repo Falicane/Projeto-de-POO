@@ -1,4 +1,4 @@
-package src;
+package torneio;
 
 import javax.swing.*;
 import java.awt.*;
@@ -70,6 +70,7 @@ public class TorneioGUI extends JFrame {
 
     /**
      * Adiciona um lutador com base em entrada do usuário.
+     * 
      * @param e Evento do botão.
      */
     private void adicionarLutador(ActionEvent e) {
@@ -81,21 +82,21 @@ public class TorneioGUI extends JFrame {
             // Diálogo para selecionar estilo de luta
             EstiloLuta[] estilos = EstiloLuta.values();
             EstiloLuta estilo = (EstiloLuta) JOptionPane.showInputDialog(
-                this,
-                "Selecione o estilo de luta:",
-                "Estilo de Luta",
-                JOptionPane.PLAIN_MESSAGE,
-                null,
-                estilos,
-                EstiloLuta.MMA
-            );
+                    this,
+                    "Selecione o estilo de luta:",
+                    "Estilo de Luta",
+                    JOptionPane.PLAIN_MESSAGE,
+                    null,
+                    estilos,
+                    EstiloLuta.MMA);
 
             Lutador lutador = new Lutador(nome, estilo, habilidade);
             torneio.adicionarCompetidor(lutador);
             // Atualiza a lista visual
             competidoresModel.addElement(lutador.getDescricao());
         } catch (NumberFormatException ex) {
-            JOptionPane.showMessageDialog(this, "Habilidade deve ser um número válido", "Erro", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Habilidade deve ser um número válido", "Erro",
+                    JOptionPane.ERROR_MESSAGE);
         } catch (HabilidadeInvalidaException | IllegalArgumentException ex) {
             JOptionPane.showMessageDialog(this, ex.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
         }
@@ -103,6 +104,7 @@ public class TorneioGUI extends JFrame {
 
     /**
      * Ponto de entrada da aplicação.
+     * 
      * @param args Argumentos da linha de comando (não utilizados).
      */
     public static void main(String[] args) {
