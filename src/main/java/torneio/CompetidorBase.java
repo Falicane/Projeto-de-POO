@@ -10,7 +10,7 @@ public abstract class CompetidorBase implements Competidor {
 
     /**
      * Construtor que inicializa nome e habilidade, com validações.
-     * @param nome Nome do competidor.
+     * @param nome Nome do competidor. 
      * @param habilidade Habilidade do competidor (0-100).
      * @throws IllegalArgumentException se o nome for nulo ou vazio.
      * @throws HabilidadeInvalidaException se a habilidade for inválida.
